@@ -18,7 +18,7 @@ export const socialLinks: SocialLink[] = [
     platform: 'GitHub',
     icon: 'github-logo',
     url: 'https://github.com/guillaumejacquart',
-    description: "I'm a developer"
+    description: "I'm a software engineer"
   },
   {
     platform: 'Medium',
