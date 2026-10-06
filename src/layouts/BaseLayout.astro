@@ -16,6 +16,12 @@ const { title, description } = Astro.props;
 <html lang="en">
   <head>
     <MainHead title={title} description={description} />
+    {/* Centralized analytics (Umami). Website ID is public by design
+        (visible in page source). Skipped in `astro dev` so local visits
+        don't pollute production stats. */}
+    {!import.meta.env.DEV && (
+      <script defer src="https://stats.guillaumejacquart.com/script.js" data-website-id="cbe344e7-b7ce-4003-a7e0-ced69c422b01"></script>
+    )}
   </head>
   <body>
     <div class="layout">
